@@ -9,6 +9,36 @@ body {
     margin: 0 auto;
 }
 
+button,input,optgroup,select,textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,select {
+    text-transform: none;
+}
+
+img {
+    display: block;
+} 
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+}
+
+*,::after,::before {
+    box-sizing: border-box;
+}
+
 /* header */
 
 .header{
@@ -153,6 +183,7 @@ body {
     margin-bottom: 25px;
     max-width: 455px;
     color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
 }
 
 .tools_text{
@@ -161,13 +192,21 @@ body {
     line-height: 30px;
     margin-bottom: 90px;
     max-width: 427px;
-    color: rgba(255, 255, 255, 0.55)
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 auto;
+    text-align: center;
 }
 
 .tools_list{
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    column-gap: 24px;
+    row-gap: 100px;
+}
+
+.tools_list_item{
+    max-width: 392px;
+    padding: 33px;
 }
 
 .tools_list_title{
@@ -188,11 +227,13 @@ body {
     font-weight: 400;
     line-height: 30px;
     color: rgba(255, 255, 255, 0.55);
+    padding-bottom: 30px;
 }
 
 .tools_list_link{
     font-weight: 600;
     line-height: 24px;
+    margin-left: auto;
 }
 
 .tools_btn {
@@ -206,6 +247,13 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     margin-top: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.tools_list_sublist{
+    display: flex;
+    gap: 12px;
 }
 
 .tools_list_link:hover{
@@ -219,11 +267,26 @@ body {
     /* background-position: ; */
 }
 
+.tools_list_text_wrap{
+    padding-top: 33px;
+    padding-bottom: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.tools_list_elements{
+    display: flex;
+    align-items: center;
+}
+
 /* brand */
 
-.brand{
-    padding-top: 200px;
-    padding-bottom: 200px;
+.section_brand{
+    padding-top: 55px;
+    padding-bottom: 55px;
+    background-image: url("./img/Rectangle\ 308.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .brand_title{
@@ -231,7 +294,8 @@ body {
     font-weight: 500;
     line-height: 36px;
     color: rgba(255, 255, 255, 0.8);
-    margin-top: 55px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .brand_list{
@@ -240,20 +304,38 @@ body {
     margin-top: 55px;
 }
 
+.brand_container{
+    max-width: 1059px;
+    padding-top: 55px;
+    padding-bottom: 56px;
+    padding-left: 82px;
+    padding-right: 83px;
+}
+
 /* newcomer */
 
 .section_newcomer{
     padding-top: 200px;
     padding-bottom: 200px;
+}
+
+.newcomer_div{
     display: flex;
     gap: 197px;
 }
 
+/* div{
+    max-width: 427px;
+} */
+
 .newcomer_title{
+    color: rgba(255, 255, 255, 0.90);
     font-size: 48px;
+    font-style: normal;
     font-weight: 500;
-    line-height: 62px;
-    color: rgba(255, 255, 255, 0.9);
+    line-height: 130%;
+    max-width: 401px;
+    margin-bottom: 30px;
 }
 
 .newcomer_text{
@@ -279,7 +361,16 @@ body {
 
 .newcomer_list{
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 50px;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.newcomer_list_item{
+    max-width: 288px;
+    padding: 28px 21px;
 }
 
 .newcomer_list_title{
@@ -307,6 +398,8 @@ body {
 .newcomer_list_link{
     font-weight: 600;
     line-height: 24px;
+    display: block;
+    margin: 0 auto;
 }
 
 .newcomer_list_link:hover {
@@ -320,24 +413,106 @@ body {
     /* background-position: ; */
 }
 
+.newcomer_list_sublist{
+    display: flex;
+    gap: 12px;
+}
+
+.newcomer_list_text_wrap{
+    padding-top: 28px;
+    padding-bottom: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.newcomer_list_elements{
+    display: flex;
+    align-items: center;
+}
+
 /* testimonial */
 
-.testimonial{
-        padding-top: 200px;
-        padding-bottom: 250px;
-    }
+.section_testimonial{
+    padding-top: 200px;
+    padding-bottom: 250px;
+}
 
-.testimonial_list_item_text{
-    font-family: Roboto;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 30px;
-        color: rgba(255, 255, 255, 0.78);
+.testimonial_div{
+    display: flex;
+    align-items: center;
+}
+
+.testimonial_second_div_text{
+    width: 393px;
+    color: rgba(255, 255, 255, 0.78);
+    font-family: "Roboto";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1;
+    letter-spacing: 0.21px;
+}
+
+.testimonial_second_div{
+    width: 445px;
+    height: 225px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: url("./img/“.png");
+    background-repeat: no-repeat;
+    margin-bottom: 100px;
+}
+
+.testimonial_btn_left{
+    width: 80px;
+    height: 100px;
+    border-radius: 8px;
+    background-color: transparent;
+    background-image: url("./img/Vector.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.testimonial_btn_right{
+    width: 80px;
+    height: 100px;
+    border-radius: 8px;
+    background-color: transparent;
+    background-image: url("./img/Vector__.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.testimonial_content_wrap{
+    display: flex;
+    align-items: center;
+    gap: 108px;
+}
+
+.testimonial_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 125px;
+    gap: 18px;
+}
+
+.testimonial_list_item{
+    width: 44px;
+    height: 6px;
+    background-color: rgba(40, 48, 54, 1);
+    border-radius: 4px;
+}
+
+.testimonial_list_item:nth-child(2) {
+    background-color: rgba(255, 110, 48, 1);
+    height: 8px;
 }
 
 /* join */
 
-.join{
+.section_join{
     padding-top: 250px;
     padding-bottom: 240px;
 }
@@ -347,6 +522,8 @@ body {
     font-weight: 500;
     line-height: 62px;
     color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .join_list_item_text{
@@ -354,7 +531,10 @@ body {
     font-weight: 500;
     line-height: 30px;
     max-width: 427px;
+    text-align: center;
+    margin: 0 auto;
     color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 100px;
 }
 
 .join_list_item_form{
@@ -368,7 +548,9 @@ body {
     display: flex;
     align-items: center;
     padding: 8px 11px 8px 18px;
-    border-radius: 15px;   
+    border-radius: 15px;
+    max-width: 549px;
+    margin: 0 auto;
 }
 
 .join_list_item_form_input{
@@ -394,44 +576,80 @@ body {
 /* footer */
 
 .footer{
-        padding-top: 70px;
-        padding-bottom: 98px;
-    }
+    padding-top: 70px;
+    padding-bottom: 98px;
+}
+
+.footer_content_wrap{
+    display: flex;
+    justify-content: center;
+    gap: 115px;
+}
+
+/* .footer_content_wrap_an{
+    display: flex;
+    gap: 156px;
+} */
 
 .footer_logo{
-        font-size: 22px;
-        font-weight: 600;
-        line-height: 33px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer_link{
+    display: flex;
+    margin-bottom: 25px;
+    gap: 12px;
 }
 
 .footer_text_copyright{
-        font-weight: 500;
-        line-height: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 21px;
 }
 
 .footer_text{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 260px;
 }
 
 .footer_div_title{
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
 }
 
 .address_list_link{
-        font-weight: 500;
-        line-height: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.address_list_item{
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 10px;
 }
 
 .footer_div_text{
-        font-weight: 500;
-        line-height: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 10px;
 }
 
 .footer_div_list_link{
-        font-weight: 500;
-        line-height: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.footer_div_list_item{
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 10px;
 }
